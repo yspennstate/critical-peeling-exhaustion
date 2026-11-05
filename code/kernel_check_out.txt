@@ -1,0 +1,22 @@
+1. critical equations
+   f(Z) - (1 - 1/Z)  = 0.0
+   Z^2 f'(Z) - 1     = -1.1479e-41
+   same, by summing the series: -5.1657e-41, 9.1835e-41
+2. nu(-k): partition function against the kernel d(k) T(k)/(2k-1)
+   k=    1  partition 0.296287005235067  kernel 0.296287005235067  rel.diff 9.18e-41
+   k=    2  partition 0.0543233299405645  kernel 0.0543233299405645  rel.diff 1.15e-40
+   k=    3  partition 0.021705549729767  kernel 0.021705549729767  rel.diff 4.59e-41
+   k=    5  partition 0.00687017896624881  kernel 0.00687017896624881  rel.diff 6.89e-41
+   k=   10  partition 0.00140946642990134  kernel 0.00140946642990134  rel.diff 2.3e-41
+   k=   50  partition 3.11128733482608e-5  kernel 3.11128733482608e-5  rel.diff 2.3e-41
+   k=  200  partition 1.04741344537871e-06  kernel 1.04741344537871e-06  rel.diff 2.22e-16  (direct sum)
+   k= 1000  partition 1.93207673079911e-08  kernel 1.93207673079911e-08  rel.diff 2.22e-16  (direct sum)
+3. total mass
+   negative part 0.413540733144505, positive part 0.586459266855495, total - 1 = -2.22e-16
+4. harmonicity of h
+   p=1  sum_j nu(j) h(p+j) / h(p) - 1 = 0.0
+   p=2  sum_j nu(j) h(p+j) / h(p) - 1 = -1.1479e-41
+   p=3  sum_j nu(j) h(p+j) / h(p) - 1 = -1.1479e-41
+   p=4  sum_j nu(j) h(p+j) / h(p) - 1 = 0.0
+   p=5  sum_j nu(j) h(p+j) / h(p) - 1 = 0.0
+   p=6  sum_j nu(j) h(p+j) / h(p) - 1 = 0.0

@@ -1,0 +1,61 @@
+{
+  "C": 4.949100893673263,
+  "Z": 1.687552917156501,
+  "c": 6.750211668626004,
+  "fpp": 0.35349512851621534,
+  "D": 1.849426171137624,
+  "critical_residual": -2.039157646249539e-56,
+  "D_identity_residual": -8.156630584998156e-56,
+  "integral_checks": [
+    {
+      "j": 1,
+      "scaled_integral_ratio": 0.0991372300679234,
+      "quadrature_abs_error": 1.0195788231247695e-56
+    },
+    {
+      "j": 3,
+      "scaled_integral_ratio": 0.29868389976508286,
+      "quadrature_abs_error": 1.5293682346871542e-56
+    },
+    {
+      "j": 10,
+      "scaled_integral_ratio": 0.5853953643031274,
+      "quadrature_abs_error": 5.0978941156238473e-57
+    },
+    {
+      "j": 100,
+      "scaled_integral_ratio": 0.9097442249068654
+    },
+    {
+      "j": 1000,
+      "scaled_integral_ratio": 0.9858095758176045
+    },
+    {
+      "j": 10000,
+      "scaled_integral_ratio": 0.9980613881160529
+    }
+  ],
+  "transition_rows": [
+    {
+      "p": 1,
+      "row_sum_truncated": 0.9999999997525525,
+      "tail_cutoff": 100000
+    },
+    {
+      "p": 2,
+      "row_sum_truncated": 0.9999999998350343,
+      "tail_cutoff": 100000
+    },
+    {
+      "p": 10,
+      "row_sum_truncated": 0.9999999999297788,
+      "tail_cutoff": 100000
+    },
+    {
+      "p": 100,
+      "row_sum_truncated": 0.9999999999780358,
+      "tail_cutoff": 100000
+    }
+  ],
+  "max_memory_MB_estimate": 15
+}

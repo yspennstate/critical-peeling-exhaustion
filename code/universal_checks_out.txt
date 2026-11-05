@@ -1,0 +1,6 @@
+rows 70 max normalization error 5.551115123125783e-16
+big_over_R 2.652566953259518
+truncated_mean_over_R 0.5022244640838107
+truncated_second_over_R 0.29229473352320934
+delta_over_R 0.9991147725206558
+min b/R for p>=8 0.0441736746496655
