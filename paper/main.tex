@@ -44,7 +44,7 @@ Corollary~27 of \cite{Cur} states that if $\mathbf q$ is of type $a\in[3/2,5/2]$
 \emph{Open question.} Is the last corollary true for any critical weight sequence?
 \end{quote}
 
-In Curien's proof the type enters twice. The conditional probability that a given boundary vertex is swallowed at the next step, when the hole has half-perimeter $\ell$, is of order $\ell^{1-a}$, which uses the polynomial tail $\nu(-k)\sim p_{\mathbf q}k^{-a}$ of the step distribution of the perimeter process; and the divergence of $\sum_n(S^\uparrow_n)^{1-a}$ along the perimeter process $S^\uparrow$ follows from the convergence of $n^{-1/(a-1)}S^\uparrow_n$ to a positive limit, through Jeulin's lemma. Neither the tail asymptotics nor the scaling limit is available for a general critical weight sequence. We prove that they are not needed.
+In Curien's proof the type enters twice. The conditional probability that a given boundary vertex is swallowed at the next step, when the hole has half-perimeter $\ell$, is of order $\ell^{1-a}$, which uses the polynomial tail $\nu(-k)\sim p_{\mathbf q}k^{-a}$ of the step distribution of the perimeter process; and the divergence of $\sum_n(S^\uparrow_n)^{1-a}$ along the perimeter process $S^\uparrow$ follows from the convergence of $n^{-1/(a-1)}S^\uparrow_n$ to a positive limit, through Jeulin's lemma \cite{Jeu}. Weight sequences with this tail and $a\in(3/2,5/2)$ are the non-generic critical sequences with large faces of Le Gall and Miermont \cite{LGM}; the geometry of the corresponding infinite maps was studied by Budd and Curien \cite{BC}, and the case $a=2$ by Budd, Curien and Marzouk \cite{BCM}. Neither the tail asymptotics nor the scaling limit is available for a general critical weight sequence. We prove that they are not needed.
 
 \begin{theorem}\label{thm:main}
 Let $\mathbf q$ be an admissible critical weight sequence, let $\ell\ge1$, and let $\mathcal A$ be a peeling algorithm that never stops, possibly using additional randomness independent of the map. Under $\mathbb P^{(\ell)}_\infty$ the filled-in exploration $(\bar{\mathfrak e}_n)_{n\ge0}$ driven by $\mathcal A$ satisfies $\bigcup_{n\ge0}\bar{\mathfrak e}_n=\mathfrak m$ almost surely.
@@ -326,11 +326,23 @@ The paper is part of the Math Brain project, whose public repository is \url{htt
 \bibitem{Bud}
 T.~Budd, The peeling process of infinite Boltzmann planar maps, \emph{Electron. J. Combin.} \textbf{23}(1) (2016), Paper~1.28. Also arXiv:1506.01590.
 
+\bibitem{BC}
+T.~Budd and N.~Curien, Geometry of infinite planar maps with high degrees, \emph{Electron. J. Probab.} \textbf{22} (2017), 1--37.
+
+\bibitem{BCM}
+T.~Budd, N.~Curien and C.~Marzouk, Infinite random planar maps related to Cauchy processes, \emph{J. \'Ec. polytech. Math.} \textbf{5} (2018), 749--791.
+
 \bibitem{Cur}
 N.~Curien, \emph{Peeling random planar maps}, lecture notes of the \'Ecole d'\'Et\'e de Probabilit\'es de Saint-Flour XLIX (2019), preliminary version, \url{https://www.imo.universite-paris-saclay.fr/~nicolas.curien/}.
 
 \bibitem{CurLNM}
 N.~Curien, \emph{Peeling Random Planar Maps}, \'Ecole d'\'Et\'e de Probabilit\'es de Saint-Flour XLIX -- 2019, Lecture Notes in Mathematics 2335, Springer, Cham, 2023.
+
+\bibitem{Jeu}
+T.~Jeulin, \emph{Semi-martingales et grossissement d'une filtration}, Lecture Notes in Mathematics 833, Springer, Berlin, 1980.
+
+\bibitem{LGM}
+J.-F.~Le Gall and G.~Miermont, Scaling limits of random planar maps with large faces, \emph{Ann. Probab.} \textbf{39} (2011), 1--69.
 
 \bibitem{code}
 Y.~Shmalo, Computations for ``Filled-in peeling explorations exhaust every critical Boltzmann planar map'', \url{https://github.com/yspennstate/critical-peeling-exhaustion}, 2026.
