@@ -36,13 +36,15 @@ Let $\mathbf q$ be an admissible critical weight sequence for bipartite Boltzman
 
 \section{Introduction}\label{sec:intro}
 
-The peeling process explores a random planar map one face at a time, and for Boltzmann maps the spatial Markov property turns the perimeter of the explored region into a Markov chain whose law does not depend on the edges chosen to be peeled. Curien's Saint-Flour notes \cite{Cur,CurLNM} develop this theory for bipartite maps with a general weight sequence $\mathbf q=(q_k)_{k\ge1}$, where a face of degree $2k$ receives weight $q_k$. In the \emph{filled-in} exploration of the infinite $\mathbf q$-Boltzmann map with a boundary, each time a peeling step separates the unexplored region into a finite and an infinite part the finite part is added to the explored region, so the explored region $\bar{\mathfrak e}_n$ has a single hole at every time $n$. The edge to be peeled at each step is chosen by an algorithm $\mathcal A$ on the boundary of that hole.
+The peeling process, introduced by Angel \cite{Ang} for the uniform infinite planar triangulation, explores a random planar map one face at a time, and for Boltzmann maps the spatial Markov property turns the perimeter of the explored region into a Markov chain whose law does not depend on the edges chosen to be peeled. Curien's Saint-Flour notes \cite{Cur,CurLNM} develop this theory for bipartite maps with a general weight sequence $\mathbf q=(q_k)_{k\ge1}$, where a face of degree $2k$ receives weight $q_k$. In the \emph{filled-in} exploration of the infinite $\mathbf q$-Boltzmann map with a boundary, each time a peeling step separates the unexplored region into a finite and an infinite part the finite part is added to the explored region, so the explored region $\bar{\mathfrak e}_n$ has a single hole at every time $n$. The edge to be peeled at each step is chosen by an algorithm $\mathcal A$ on the boundary of that hole.
 
 Corollary~27 of \cite{Cur} states that if $\mathbf q$ is of type $a\in[3/2,5/2]$, then $\bigcup_n\bar{\mathfrak e}_n$ is the whole map almost surely, whatever the algorithm. The notes then ask (\cite[p.~57]{Cur}):
 
 \begin{quote}
 \emph{Open question.} Is the last corollary true for any critical weight sequence?
 \end{quote}
+
+For the uniform infinite planar triangulation and quadrangulation, Curien and Le Gall \cite{CLG} show that any peeling process eventually discovers the whole map, and Curien and Marzouk \cite{CM} give a polynomial bound on the probability that the origin is not swallowed by time $n$.
 
 In Curien's proof the type enters twice. The conditional probability that a given boundary vertex is swallowed at the next step, when the hole has half-perimeter $\ell$, is of order $\ell^{1-a}$, which uses the polynomial tail $\nu(-k)\sim p_{\mathbf q}k^{-a}$ of the step distribution of the perimeter process; and the divergence of $\sum_n(S^\uparrow_n)^{1-a}$ along the perimeter process $S^\uparrow$ follows from the convergence of $n^{-1/(a-1)}S^\uparrow_n$ to a positive limit, through Jeulin's lemma \cite{Jeu}. Weight sequences with this tail and $a\in(3/2,5/2)$ are the non-generic critical sequences with large faces of Le Gall and Miermont \cite{LGM}; the geometry of the corresponding infinite maps was studied by Budd and Curien \cite{BC}, and the case $a=2$ by Budd, Curien and Marzouk \cite{BCM}. Neither the tail asymptotics nor the scaling limit is available for a general critical weight sequence. We prove that they are not needed.
 
@@ -323,6 +325,8 @@ The paper is part of the Math Brain project, whose public repository is \url{htt
 
 \begin{thebibliography}{10}
 
+\bibitem{Ang} O.~Angel, Growth and percolation on the uniform infinite planar triangulation, \emph{Geom. Funct. Anal.} \textbf{13} (2003), 935--974.
+
 \bibitem{Bud}
 T.~Budd, The peeling process of infinite Boltzmann planar maps, \emph{Electron. J. Combin.} \textbf{23}(1) (2016), Paper~1.28. Also arXiv:1506.01590.
 
@@ -337,6 +341,10 @@ N.~Curien, \emph{Peeling random planar maps}, lecture notes of the \'Ecole d'\'E
 
 \bibitem{CurLNM}
 N.~Curien, \emph{Peeling Random Planar Maps}, \'Ecole d'\'Et\'e de Probabilit\'es de Saint-Flour XLIX -- 2019, Lecture Notes in Mathematics 2335, Springer, Cham, 2023.
+
+\bibitem{CLG} N.~Curien and J.-F.~Le Gall, Scaling limits for the peeling process on random maps, \emph{Ann. Inst. Henri Poincar\'e Probab. Stat.} \textbf{53} (2017), 322--357.
+
+\bibitem{CM} N.~Curien and C.~Marzouk, How fast planar maps get swallowed by a peeling process, \emph{Electron. Commun. Probab.} \textbf{23} (2018), Paper No.~18.
 
 \bibitem{Jeu}
 T.~Jeulin, \emph{Semi-martingales et grossissement d'une filtration}, Lecture Notes in Mathematics 833, Springer, Berlin, 1980.
