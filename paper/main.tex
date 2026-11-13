@@ -44,12 +44,12 @@ Corollary~27 of \cite{Cur} states that if $\mathbf q$ is of type $a\in[3/2,5/2]$
 \emph{Open question.} Is the last corollary true for any critical weight sequence?
 \end{quote}
 
-For the uniform infinite planar triangulation and quadrangulation, Curien and Le Gall \cite{CLG} show that any peeling process eventually discovers the whole map, and Curien and Marzouk \cite{CM} give a polynomial bound on the probability that the origin is not swallowed by time $n$.
+For the uniform infinite planar triangulation and quadrangulation, Curien and Le Gall \cite{CLG} show that any peeling process eventually discovers the whole map, and Curien and Marzouk \cite{CM} give a polynomial bound on the probability that the origin is not swallowed by time $n$. For the infinite discrete stable maps, whose perimeter processes have polynomially decaying jumps, Curien and Marzouk \cite{CMr} show that every peeling exploration reveals roughly the same region, close to a metric ball. That setting assumes a polynomial tail for the step distribution of the perimeter process; the argument below does not.
 
 In Curien's proof the type enters twice. The conditional probability that a given boundary vertex is swallowed at the next step, when the hole has half-perimeter $\ell$, is of order $\ell^{1-a}$, which uses the polynomial tail $\nu(-k)\sim p_{\mathbf q}k^{-a}$ of the step distribution of the perimeter process; and the divergence of $\sum_n(S^\uparrow_n)^{1-a}$ along the perimeter process $S^\uparrow$ follows from the convergence of $n^{-1/(a-1)}S^\uparrow_n$ to a positive limit, through Jeulin's lemma \cite{Jeu}. Weight sequences with this tail and $a\in(3/2,5/2)$ are the non-generic critical sequences with large faces of Le Gall and Miermont \cite{LGM}; the geometry of the corresponding infinite maps was studied by Budd and Curien \cite{BC}, and the case $a=2$ by Budd, Curien and Marzouk \cite{BCM}. Neither the tail asymptotics nor the scaling limit is available for a general critical weight sequence. We prove that they are not needed.
 
 \begin{theorem}\label{thm:main}
-Let $\mathbf q$ be an admissible critical weight sequence, let $\ell\ge1$, and let $\mathcal A$ be a peeling algorithm that never stops, possibly using additional randomness independent of the map. Under $\mathbb P^{(\ell)}_\infty$ the filled-in exploration $(\bar{\mathfrak e}_n)_{n\ge0}$ driven by $\mathcal A$ satisfies $\bigcup_{n\ge0}\bar{\mathfrak e}_n=\mathfrak m$ almost surely.
+Let $\mathbf q$ be an admissible critical weight sequence, let $\ell\ge1$, and let $\mathcal A$ be a nonanticipating peeling algorithm that never stops, possibly using additional randomness independent of the map. Under $\mathbb P^{(\ell)}_\infty$ the filled-in exploration $(\bar{\mathfrak e}_n)_{n\ge0}$ driven by $\mathcal A$ satisfies $\bigcup_{n\ge0}\bar{\mathfrak e}_n=\mathfrak m$ almost surely.
 \end{theorem}
 
 The algorithm in \cite{Cur} is allowed to take a cemetery value, and an exploration that stops at a finite time explores a finite region; Corollary~27 and its question concern explorations that go on forever, which is the hypothesis of Theorem~\ref{thm:main}.
@@ -58,7 +58,7 @@ The proof has three ingredients. The first is an exact formula for the negative 
 \[
 \nu(-k)=\frac{d(k)}{2k-1}\sum_{m\ge1}\frac{m(2m+1)d(m)\nu(m)}{m+k},\qquad d(k)=4^{-k}\binom{2k}k .
 \]
-In the full-perimeter normalisation this formula is due to Budd \cite{Bud}; we derive it directly from the integral representation of the disk partition functions in \cite{Cur}, which shows that it holds for every critical weight sequence without any regularity assumption. With $T(p)$ the sum on the right at $k=p$ and $R(p)=p^{-1/2}T(p)$, the formula shows that the swallowing probability at half-perimeter $p$ is at least a constant times $R(p)$ (Lemma~\ref{lem:est}). For a weight sequence of type $a$ one has $R(p)\asymp p^{1-a}$, Curien's rate. The same quantity controls the probability of a jump of relative size more than one half and the mean and variance of the truncated increments of $\log h^\uparrow(P_n)$. The second ingredient is the identity $\E_p[h^\uparrow(p)/h^\uparrow(P_1)]=1-\delta(p)$, where $\delta(p)$ is the probability that the underlying walk jumps below $1$ from $p$; it gives the cancellation between upward and downward steps that a direct estimate of the drift of $\log h^\uparrow(P_n)$ would miss. The third is a localisation argument: if $\sum_nR(P_n)$ were finite on an event of positive probability, then on that event $\log h^\uparrow(P_n)$ would converge, while the perimeter tends to infinity (Proposition~\ref{prop:sum}). The proof is completed by a supermartingale bound for the survival of a fixed boundary edge and a path argument in the dual map.
+In the full-perimeter normalisation this formula is due to Budd \cite{Bud}; we derive it directly from the integral representation of the disk partition functions in \cite{Cur}, which shows that it holds for every critical weight sequence without any regularity assumption. With $T(p)$ the sum on the right at $k=p$ and $R(p)=p^{-1/2}T(p)$, the formula shows that the swallowing probability at half-perimeter $p$ is at least a constant times $R(p)$ (Lemma~\ref{lem:est}). For a weight sequence of type $a$ one has $R(p)\asymp p^{1-a}$, Curien's rate. The same quantity controls the probability of a jump of relative size more than one half and the mean and variance of the truncated increments of $\log h^\uparrow(P_n)$, where $P_n$ is the half-perimeter of the hole after $n$ peeling steps and $h^\uparrow$ is Curien's harmonic function (both recalled in Section~\ref{sec:setup}). The second ingredient is the identity $\E_p[h^\uparrow(p)/h^\uparrow(P_1)]=1-\delta(p)$, where $\delta(p)$ is the probability that the underlying walk jumps below $1$ from $p$; it gives the cancellation between upward and downward steps that a direct estimate of the drift of $\log h^\uparrow(P_n)$ would miss. The third is a localisation argument: if $\sum_nR(P_n)$ were finite on an event of positive probability, then on that event $\log h^\uparrow(P_n)$ would converge, while the perimeter tends to infinity (Proposition~\ref{prop:sum}). The proof is completed by a supermartingale bound for the survival of a fixed boundary edge and a path argument in the dual map.
 
 Section~\ref{sec:setup} recalls the setting. Section~\ref{sec:kernel} proves the kernel formula and the estimates that follow from it, Section~\ref{sec:perimeter} studies the perimeter process, Section~\ref{sec:proof} proves Theorem~\ref{thm:main}, and Section~\ref{sec:numerics} describes the computer checks that accompany the paper. Numbered statements of \cite{Cur} refer to the version of the notes on the author's web page; the published book is \cite{CurLNM}.
 
@@ -85,7 +85,7 @@ We use the elementary facts
 \frac1{2\sqrt j}\le d(j)\le\frac1{\sqrt j},\qquad \sqrt j\le h(j)\le2\sqrt j,\qquad \frac{h(j+1)}{h(j)}=1+\frac1{2j}\qquad(j\ge1).
 \end{equation}
 
-Let $\mathfrak m$ be a map with law $\mathbb P^{(\ell)}_\infty$, the infinite $\mathbf q$-Boltzmann map with a boundary of perimeter $2\ell$ \cite[Theorem~8]{Cur}. The filled-in exploration starts from $\bar{\mathfrak e}_0$, the boundary face. At each step $\mathcal A$ selects an edge on the boundary of the hole of $\bar{\mathfrak e}_n$, which is peeled; if the step encloses a finite region, that region is filled in. Let $\F_n$ be the $\sigma$-field generated by $\bar{\mathfrak e}_0,\dots,\bar{\mathfrak e}_n$ and the randomness used by $\mathcal A$ up to time $n$, and let $P_n$ be the half-perimeter of the hole of $\bar{\mathfrak e}_n$, so $P_0=\ell$. The boundary of the hole is a cyclic sequence of $2P_n$ edges of $\mathfrak m$, each of which has a face of $\bar{\mathfrak e}_n$ on its other side; we call these edges \emph{exposed} at time $n$. Number the positions of the cyclic sequence from the selected edge, at position $0$, to the left by $1,2,\dots,2P_n-1$; the edge at position $i$ is at position $2P_n-i$ from the right. The spatial Markov property gives the following description of one step \cite[Section~4.2]{Cur}. Conditionally on $\F_n$, with $p=P_n$:
+Let $\mathfrak m$ be a map with law $\mathbb P^{(\ell)}_\infty$, the infinite $\mathbf q$-Boltzmann map with a boundary of perimeter $2\ell$ \cite[Theorem~8]{Cur}. The filled-in exploration starts from $\bar{\mathfrak e}_0$, the boundary face. At each step $\mathcal A$ selects an edge on the boundary of the hole of $\bar{\mathfrak e}_n$, which is peeled; if the step encloses a finite region, that region is filled in. Let $\F_n$ be the $\sigma$-field generated by $\bar{\mathfrak e}_0,\dots,\bar{\mathfrak e}_n$ and the randomness used by $\mathcal A$ up to time $n$. The algorithm is \emph{nonanticipating}: the edge it selects at time $n$ is $\F_n$-measurable, so it is chosen before the outcome of the next peeling step is revealed. Let $P_n$ be the half-perimeter of the hole of $\bar{\mathfrak e}_n$, so $P_0=\ell$. The boundary of the hole is a cyclic sequence of $2P_n$ edges of $\mathfrak m$, each of which has a face of $\bar{\mathfrak e}_n$ on its other side; we call these edges \emph{exposed} at time $n$. Number the positions of the cyclic sequence from the selected edge, at position $0$, to the left by $1,2,\dots,2P_n-1$; the edge at position $i$ is at position $2P_n-i$ from the right. The spatial Markov property gives the following description of one step \cite[Section~4.2]{Cur}. Conditionally on $\F_n$, with $p=P_n$:
 \begin{enumerate}[label=(P\arabic*),leftmargin=*]
 \item for each $k\ge1$, the peeled edge is incident to a new face of degree $2k$ with probability $\nu(k-1)h(p+k-1)/h(p)$; then $P_{n+1}=p+k-1$;
 \item for each $0\le k\le p-2$, the peeled edge is glued to the edge at position $2k+1$ on its left, and the $2k$ edges strictly between them bound a finite region which is filled in, with probability $\frac12\nu(-k-1)h(p-k-1)/h(p)$; then $P_{n+1}=p-k-1$. The same holds with left replaced by right.
@@ -120,7 +120,7 @@ where $c_{\mathbf q_g}=4Z_{\mathbf q_g}$. We change variables. Put $a_k=q_k\bino
 \[
 J'(r)=Z\Bigl(1-\sum_{k\ge1}ka_kr^{k-1}\Bigr)=Z\sum_{k\ge2}ka_k\bigl(1-r^{k-1}\bigr),\qquad0\le r\le1 .
 \]
-The last series has nonnegative terms and converges uniformly on $[0,1]$, and it is positive for $r<1$ because some $a_k$ with $k\ge2$ is positive. So $J$ increases continuously from $J(0)=0$ to $J(1)=Z(1-f(Z))=1$. The weight sequence $\mathbf q_g$ satisfies $f_{\mathbf q_g}(x)=f(gx)$, so $x$ solves $f_{\mathbf q_g}(x)=1-1/x$ if and only if $y=gx$ solves $y(1-f(y))=g$. On $[0,Z]$ the function $y(1-f(y))=J(y/Z)$ is increasing, so the smallest solution is $y=ZJ^{-1}(g)$, and $g\,c_{\mathbf q_g}=4ZJ^{-1}(g)=c\,J^{-1}(g)$. No property of $f$ beyond $Z$ is used. The substitution $g=J(r)$ in \eqref{eq:W} gives
+The last series has nonnegative terms and converges uniformly on $[0,1]$, and it is positive for $r<1$ because some $a_k$ with $k\ge2$ is positive. So $J$ increases continuously from $J(0)=0$ to $J(1)=Z(1-f(Z))=1$. The weight sequence $\mathbf q_g$ satisfies $f_{\mathbf q_g}(x)=f(gx)$. For $g=0$ this is the constant $q_1=f(0)\le f(Z)<1$, so $c_{\mathbf q_0}$ is finite and $g\,c_{\mathbf q_g}=0=c\,J^{-1}(0)$. For $0<g\le1$, $x$ solves $f_{\mathbf q_g}(x)=1-1/x$ if and only if $y=gx$ solves $y(1-f(y))=g$. On $[0,Z]$ the function $y(1-f(y))=J(y/Z)$ is increasing, so the smallest solution is $y=ZJ^{-1}(g)$, and $g\,c_{\mathbf q_g}=4ZJ^{-1}(g)=c\,J^{-1}(g)$. No property of $f$ beyond $Z$ is used. The substitution $g=J(r)$ in \eqref{eq:W} gives
 \[
 W^{(j)}=c^j d(j)\int_0^1r^jJ'(r)\,dr .
 \]
@@ -259,7 +259,7 @@ When $\nu(-k)\sim p_{\mathbf q}k^{-a}$ with $a\in(3/2,5/2]$, \eqref{eq:compar} g
 \section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
 
 \begin{lemma}\label{lem:swallow}
-If an edge $\varepsilon$ is exposed at time $n$ and $P_n\ge4$, then $\Pp(\varepsilon\text{ is not exposed at time }n+1\mid\F_n)\ge b(P_n)$.
+Let $\varepsilon$ be an edge exposed at time $n$ and determined by $\F_n$ (for instance the edge at a given position at time $n$). If $P_n\ge4$, then $\Pp(\varepsilon\text{ is not exposed at time }n+1\mid\F_n)\ge b(P_n)$.
 \end{lemma}
 
 \begin{proof}
@@ -290,7 +290,7 @@ The repository \cite{code} contains three Python programs. The first, \texttt{ke
 \[
 q_1=0,\qquad q_k=\frac{C_*\,k^{-4}Z_*^{1-k}}{\binom{2k-1}{k-1}}\quad(k\ge2),\qquad C_*=\frac1{\zeta(3)-1},\qquad Z_*=\frac{\zeta(3)-1}{\zeta(3)-\zeta(4)},
 \]
-for which $f(Z_*r)=C_*\sum_{k\ge2}k^{-4}r^{k-1}$, so that $f(Z_*)=C_*(\zeta(4)-1)=1-1/Z_*$ and $Z_*^2f'(Z_*)=Z_*C_*(\zeta(3)-\zeta(4))=1$; here $f$ has radius of convergence exactly $Z_*$. In this case $J'(r)=Z_*C_*(\zeta(3)-\mathrm{Li}_3(r)/r)$, and $\int_0^1r^jJ'(r)\,dr=Z_*C_*\bigl(\zeta(2)/j^2-\zeta(3)/(j(j+1))-H_j/j^3\bigr)$ for $j\ge1$, with $H_j$ the harmonic number. The program checks the two critical equations, compares $\nu(-k)$ from this closed form with $d(k)T(k)/(2k-1)$, checks that $\nu$ has total mass one, and checks \eqref{eq:harm} for $p\le6$. The relative differences are below $2\cdot10^{-40}$ in $40$-digit arithmetic for $k\le50$ and at the level of double-precision rounding for $k=200$ and $k=1000$; the total mass and the harmonicity agree to the same accuracy.
+for which $f(Z_*r)=C_*\sum_{k\ge2}k^{-4}r^{k-1}$, so that $f(Z_*)=C_*(\zeta(4)-1)=1-1/Z_*$ and $Z_*^2f'(Z_*)=Z_*C_*(\zeta(3)-\zeta(4))=1$; here $f$ has radius of convergence exactly $Z_*$. In this case $J'(r)=Z_*C_*(\zeta(3)-\mathrm{Li}_3(r)/r)$, and $\int_0^1r^jJ'(r)\,dr=Z_*C_*\bigl(\zeta(2)/j^2-\zeta(3)/(j(j+1))-H_j/j^3\bigr)$ for $j\ge1$, with $H_j$ the harmonic number. The program checks the two critical equations, compares $\nu(-k)$ from this closed form with $d(k)T(k)/(2k-1)$, checks that $\nu$ has total mass one, and checks \eqref{eq:harm} for $p\le6$. The relative differences are below $2\cdot10^{-40}$ in $40$-digit arithmetic for $k\le50$ and at the level of double-precision rounding for $k=200$ and $k=1000$. The harmonicity residuals for $p\le6$ are at most $1.2\cdot10^{-41}$ in absolute value; the total mass is summed in double precision and differs from one by $2.2\cdot10^{-16}$.
 
 \sloppy
 The second program, \texttt{universal\_checks.py}, takes positive laws $\nu(m)$, $m\ge1$, with $\sum_m\nu(m)h(m+1)=1$, concentrated on single atoms $m\in\{1,4,64,4096,10^6\}$ or spread over these five atoms, defines $\nu(-k)$ by Proposition~\ref{prop:kernel}, and computes the rows of \eqref{eq:K} at $p=1,2,4,8,16$ and $p=4^j$, $3\le j\le7$. All $70$ rows sum to one within $6\cdot10^{-16}$, so the kernel formula reproduces \eqref{eq:harm} for these laws. Over these rows the ratios to $R(p)$ of $K(p,B_p)$, $|\E_p L|$, $\E_pL^2$ and $\delta(p)$ are at most $2.66$, $0.51$, $0.30$ and $1.00$, and $b(p)/R(p)\ge0.044$ for $p\ge8$.
@@ -323,6 +323,35 @@ No data were used. The code is available at\\ \url{https://github.com/yspennstat
 
 The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\small
+\begin{tabular}{lp{0.62\textwidth}l}
+Symbol & Meaning & First defined \\ \hline
+$\mathbf q=(q_k)$ & weight sequence; admissible and critical throughout & Section~\ref{sec:setup} \\
+$f$, $Z$, $c$ & generating function of $\mathbf q$; smallest solution of $f(x)=1-1/x$; $c=4Z$ & Section~\ref{sec:setup} \\
+$d(j)$, $h(j)$ & $4^{-j}\binom{2j}{j}$; $h(j)=2j\,d(j)$, the function $h^\uparrow$ of \cite{Cur} & Section~\ref{sec:setup} \\
+$W^{(j)}$ & partition function of $\mathbf q$-Boltzmann maps with perimeter $2j$ & Section~\ref{sec:setup} \\
+$\nu$ & step distribution of the perimeter process & Section~\ref{sec:setup} \\
+$\mathfrak m$, $\mathbb P^{(\ell)}_\infty$ & infinite $\mathbf q$-Boltzmann map with boundary of perimeter $2\ell$, and its law & Section~\ref{sec:setup} \\
+$\mathcal A$ & nonanticipating peeling algorithm & Theorem~\ref{thm:main} \\
+$\bar{\mathfrak e}_n$ & filled-in explored region after $n$ steps & Section~\ref{sec:setup} \\
+$\F_n$ & $\sigma$-field of the exploration and of the randomness of $\mathcal A$ up to time $n$ & Section~\ref{sec:setup} \\
+$P_n$ & half-perimeter of the hole of $\bar{\mathfrak e}_n$ & Section~\ref{sec:setup} \\
+$K(p,y)$ & transition kernel of $(P_n)$ & \eqref{eq:K} \\
+$w_m$, $T$, $R$ & weights, the sum $T(x)=\sum_m w_m/(m+x)$, and $R(p)=T(p)/\sqrt p$ & Section~\ref{sec:kernel} \\
+$\mathbf q_g$, $J$ & the sequence $(g^{k-1}q_k)$; $J(r)=Zr(1-f(Zr))$ & Section~\ref{sec:kernel} \\
+$\delta(p)$, $b(p)$ & probability of a jump below $1$ from $p$; swallowing lower bound & Section~\ref{sec:kernel} \\
+$S_p$, $B_p$ & states within, and farther than, $p/2$ of $p$ & Section~\ref{sec:perimeter} \\
+$\E_p$ & expectation for the chain started at $p$ & Section~\ref{sec:perimeter} \\
+$U$, $L(p,y)$ & $\log h$; increment of $U$ truncated to $S_p$ & Section~\ref{sec:perimeter} \\
+$\varepsilon_{n,i}$, $\tau_{n,i}$ & exposed edge at position $i$ at time $n$; first time it is not exposed & Section~\ref{sec:proof} \\
+$C$ & absolute constant, which may change from line to line & Lemma~\ref{lem:est} \\
+\end{tabular}
+\end{center}
+
 \begin{thebibliography}{10}
 
 \bibitem{Ang} O.~Angel, Growth and percolation on the uniform infinite planar triangulation, \emph{Geom. Funct. Anal.} \textbf{13} (2003), 935--974.
@@ -345,6 +374,8 @@ N.~Curien, \emph{Peeling Random Planar Maps}, \'Ecole d'\'Et\'e de Probabilit\'e
 \bibitem{CLG} N.~Curien and J.-F.~Le Gall, Scaling limits for the peeling process on random maps, \emph{Ann. Inst. Henri Poincar\'e Probab. Stat.} \textbf{53} (2017), 322--357.
 
 \bibitem{CM} N.~Curien and C.~Marzouk, How fast planar maps get swallowed by a peeling process, \emph{Electron. Commun. Probab.} \textbf{23} (2018), Paper No.~18.
+
+\bibitem{CMr} N.~Curien and C.~Marzouk, Markovian explorations of random planar maps are roundish, \emph{Bull. Soc. Math. France} \textbf{148} (2020), no.~4, 709--732, doi:10.24033/bsmf.2821.
 
 \bibitem{Jeu}
 T.~Jeulin, \emph{Semi-martingales et grossissement d'une filtration}, Lecture Notes in Mathematics 833, Springer, Berlin, 1980.
