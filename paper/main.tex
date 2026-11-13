@@ -44,9 +44,9 @@ Corollary~27 of \cite{Cur} states that if $\mathbf q$ is of type $a\in[3/2,5/2]$
 \emph{Open question.} Is the last corollary true for any critical weight sequence?
 \end{quote}
 
-For the uniform infinite planar triangulation and quadrangulation, Curien and Le Gall \cite{CLG} show that any peeling process eventually discovers the whole map, and Curien and Marzouk \cite{CM} give a polynomial bound on the probability that the origin is not swallowed by time $n$. For the infinite discrete stable maps, whose perimeter processes have polynomially decaying jumps, Curien and Marzouk \cite{CMr} show that every peeling exploration reveals roughly the same region, close to a metric ball. That setting assumes a polynomial tail for the step distribution of the perimeter process; the argument below does not.
+For the uniform infinite planar triangulation and quadrangulation, Curien and Le Gall \cite[Corollary~6]{CLG} show that any peeling process eventually discovers the whole map, and for infinite Boltzmann maps with bounded face degrees Curien and Marzouk \cite{CM} give a polynomial bound on the probability that the origin is not swallowed by time $n$. For the infinite discrete stable maps, whose perimeter processes have polynomially decaying jumps, Curien and Marzouk \cite{CMr} show that every peeling exploration reveals roughly the same region, close to a metric ball. That setting assumes a polynomial tail for the step distribution of the perimeter process; the argument below does not.
 
-In Curien's proof the type enters twice. The conditional probability that a given boundary vertex is swallowed at the next step, when the hole has half-perimeter $\ell$, is of order $\ell^{1-a}$, which uses the polynomial tail $\nu(-k)\sim p_{\mathbf q}k^{-a}$ of the step distribution of the perimeter process; and the divergence of $\sum_n(S^\uparrow_n)^{1-a}$ along the perimeter process $S^\uparrow$ follows from the convergence of $n^{-1/(a-1)}S^\uparrow_n$ to a positive limit, through Jeulin's lemma \cite{Jeu}. Weight sequences with this tail and $a\in(3/2,5/2)$ are the non-generic critical sequences with large faces of Le Gall and Miermont \cite{LGM}; the geometry of the corresponding infinite maps was studied by Budd and Curien \cite{BC}, and the case $a=2$ by Budd, Curien and Marzouk \cite{BCM}. Neither the tail asymptotics nor the scaling limit is available for a general critical weight sequence. We prove that they are not needed.
+In Curien's proof the type enters twice. The conditional probability that a given boundary vertex is swallowed at the next step, when the hole has half-perimeter $\ell$, is of order $\ell^{1-a}$, which uses the polynomial tail $\nu(-k)\sim p_{\mathbf q}k^{-a}$ of the step distribution of the perimeter process; and the divergence of $\sum_n(S^\uparrow_n)^{1-a}$ along the perimeter process $S^\uparrow$ follows from the convergence in distribution of $n^{-1/(a-1)}S^\uparrow_n$ to a positive random variable, through Jeulin's lemma \cite[Proposition~4(c)]{Jeu}. Weight sequences with this tail and $a\in(3/2,5/2)$ are the non-generic critical sequences with large faces of Le Gall and Miermont \cite{LGM}; the geometry of the corresponding infinite maps was studied by Budd and Curien \cite{BC}, and the case $a=2$ by Budd, Curien and Marzouk \cite{BCM}. Neither the tail asymptotics nor the scaling limit is available for a general critical weight sequence. We prove that they are not needed.
 
 \begin{theorem}\label{thm:main}
 Let $\mathbf q$ be an admissible critical weight sequence, let $\ell\ge1$, and let $\mathcal A$ be a nonanticipating peeling algorithm that never stops, possibly using additional randomness independent of the map. Under $\mathbb P^{(\ell)}_\infty$ the filled-in exploration $(\bar{\mathfrak e}_n)_{n\ge0}$ driven by $\mathcal A$ satisfies $\bigcup_{n\ge0}\bar{\mathfrak e}_n=\mathfrak m$ almost surely.
@@ -58,7 +58,7 @@ The proof has three ingredients. The first is an exact formula for the negative 
 \[
 \nu(-k)=\frac{d(k)}{2k-1}\sum_{m\ge1}\frac{m(2m+1)d(m)\nu(m)}{m+k},\qquad d(k)=4^{-k}\binom{2k}k .
 \]
-In the full-perimeter normalisation this formula is due to Budd \cite{Bud}; we derive it directly from the integral representation of the disk partition functions in \cite{Cur}, which shows that it holds for every critical weight sequence without any regularity assumption. With $T(p)$ the sum on the right at $k=p$ and $R(p)=p^{-1/2}T(p)$, the formula shows that the swallowing probability at half-perimeter $p$ is at least a constant times $R(p)$ (Lemma~\ref{lem:est}). For a weight sequence of type $a$ one has $R(p)\asymp p^{1-a}$, Curien's rate. The same quantity controls the probability of a jump of relative size more than one half and the mean and variance of the truncated increments of $\log h^\uparrow(P_n)$, where $P_n$ is the half-perimeter of the hole after $n$ peeling steps and $h^\uparrow$ is Curien's harmonic function (both recalled in Section~\ref{sec:setup}). The second ingredient is the identity $\E_p[h^\uparrow(p)/h^\uparrow(P_1)]=1-\delta(p)$, where $\delta(p)$ is the probability that the underlying walk jumps below $1$ from $p$; it gives the cancellation between upward and downward steps that a direct estimate of the drift of $\log h^\uparrow(P_n)$ would miss. The third is a localisation argument: if $\sum_nR(P_n)$ were finite on an event of positive probability, then on that event $\log h^\uparrow(P_n)$ would converge, while the perimeter tends to infinity (Proposition~\ref{prop:sum}). The proof is completed by a supermartingale bound for the survival of a fixed boundary edge and a path argument in the dual map.
+In the full-perimeter normalisation this formula is due to Budd \cite[Lemma~4 and Section~6]{Bud}; we derive it directly from the integral representation of the disk partition functions in \cite{Cur}, which shows that it holds for every critical weight sequence without any regularity assumption. With $T(p)$ the sum on the right at $k=p$ and $R(p)=p^{-1/2}T(p)$, the formula shows that the swallowing probability at half-perimeter $p$ is at least a constant times $R(p)$ (Lemma~\ref{lem:est}). For a weight sequence of type $a$ one has $R(p)\asymp p^{1-a}$, Curien's rate. The same quantity controls the probability of a jump of relative size more than one half and the mean and variance of the truncated increments of $\log h^\uparrow(P_n)$, where $P_n$ is the half-perimeter of the hole after $n$ peeling steps and $h^\uparrow$ is Curien's harmonic function (both recalled in Section~\ref{sec:setup}). The second ingredient is the identity $\E_p[h^\uparrow(p)/h^\uparrow(P_1)]=1-\delta(p)$, where $\delta(p)$ is the probability that the underlying walk jumps below $1$ from $p$; it gives the cancellation between upward and downward steps that a direct estimate of the drift of $\log h^\uparrow(P_n)$ would miss. The third is a localisation argument: if $\sum_nR(P_n)$ were finite on an event of positive probability, then on that event $\log h^\uparrow(P_n)$ would converge, while the perimeter tends to infinity (Proposition~\ref{prop:sum}). The proof is completed by a supermartingale bound for the survival of a fixed boundary edge and a path argument in the dual map.
 
 Section~\ref{sec:setup} recalls the setting. Section~\ref{sec:kernel} proves the kernel formula and the estimates that follow from it, Section~\ref{sec:perimeter} studies the perimeter process, Section~\ref{sec:proof} proves Theorem~\ref{thm:main}, and Section~\ref{sec:numerics} describes the computer checks that accompany the paper. Numbered statements of \cite{Cur} refer to the version of the notes on the author's web page; the published book is \cite{CurLNM}.
 
@@ -76,7 +76,7 @@ so that $h$ is the function $h^\uparrow$ of \cite{Cur}. Let $W^{(j)}$ be the par
 \[
 \nu(m)=q_{m+1}c^m\quad(m\ge0),\qquad\nu(-k)=2W^{(k-1)}c^{-k}\quad(k\ge1).
 \]
-For admissible critical $\mathbf q$, $\nu$ is a probability measure and $h$ is harmonic for the $\nu$-random walk killed when it leaves $\{1,2,\dots\}$ \cite[Lemma~11]{Cur}:
+For admissible critical $\mathbf q$, $\nu$ is a probability measure and $h$ is harmonic for the $\nu$-random walk killed when it leaves $\{1,2,\dots\}$ \cite[Lemmas~9 and~11]{Cur}:
 \begin{equation}\label{eq:harm}
 \sum_{j\in\mathbb Z}\nu(j)h(p+j)=h(p),\qquad p\ge1 .
 \end{equation}
@@ -94,7 +94,7 @@ These probabilities do not depend on the selected edge, and by \eqref{eq:harm} t
 \begin{equation}\label{eq:K}
 K(p,y)=\nu(y-p)\frac{h(y)}{h(p)},\qquad p,y\ge1 .
 \end{equation}
-In each case the selected edge stops being exposed, and in case (P2) so do the $2k+1$ edges at positions $1,\dots,2k+1$ on the side of the gluing. An edge that has stopped being exposed has faces of $\bar{\mathfrak e}_n$ on both sides and is never exposed again.
+In each case the selected edge stops being exposed, and in case (P2) so do the $2k+1$ edges at positions $1,\dots,2k+1$ on the side of the gluing. Following \cite[Section~3.1]{Cur}, the exposed edges are occurrences on the boundary of the hole: one edge of $\mathfrak m$ may appear twice, and each occurrence keeps its identity until it is glued or enclosed in a filled region; an occurrence created when a new face is discovered is counted from its creation. An occurrence that stops being exposed is glued or filled in, so the edge it represents is an inner edge of $\bar{\mathfrak e}_{n+1}$; since $\bar{\mathfrak e}_{n+1}\subset\bar{\mathfrak e}_{m}$ for $m>n$, it is an inner edge of every later explored map and is never exposed again.
 
 \section{The negative jumps}\label{sec:kernel}
 
@@ -237,7 +237,7 @@ Almost surely $\sum_{n\ge0}R(P_n)=\infty$.
 \end{proposition}
 
 \begin{proof}
-Let $E=\{\sum_nR(P_n)<\infty\}$. Put $L_n=L(P_n,P_{n+1})$, $\mu_n=\E[L_n\mid\F_n]$, $D_n=L_n-\mu_n$ and $A_n=\sum_{i<n}R(P_i)$. By Lemma~\ref{lem:L}, $|D_n|\le1$, $|\mu_n|\le C\,R(P_n)$ and $\E[D_n^2\mid\F_n]\le C\,R(P_n)$. For $K>0$ let $\tau_K=\inf\{n:A_n>K\}$; since $A_n$ is $\F_{n-1}$-measurable, $\{n<\tau_K\}\in\F_n$. As $R\le R(1)$,
+Let $E=\{\sum_nR(P_n)<\infty\}$. Put $L_n=L(P_n,P_{n+1})$, $\mu_n=\E[L_n\mid\F_n]$, $D_n=L_n-\mu_n$ and $A_n=\sum_{i<n}R(P_i)$. By Lemma~\ref{lem:L}, $|D_n|\le1$, $|\mu_n|\le C\,R(P_n)$ and $\E[D_n^2\mid\F_n]\le C\,R(P_n)$. For $K>0$ let $\tau_K=\inf\{n:A_n>K\}$; since $A_0,\dots,A_n$ are $\F_n$-measurable, $\{n<\tau_K\}\in\F_n$. As $R\le R(1)$,
 \[
 \sum_{n<\tau_K}R(P_n)\le K+R(1).
 \]
@@ -253,7 +253,11 @@ so only finitely many $n<\tau_K$ have $P_{n+1}\in B_{P_n}$, almost surely. On $E
 \end{proof}
 
 \begin{remark}
-When $\nu(-k)\sim p_{\mathbf q}k^{-a}$ with $a\in(3/2,5/2]$, \eqref{eq:compar} gives $T(p)\asymp p^{3/2-a}$ and $R(p)\asymp p^{1-a}$, and Proposition~\ref{prop:sum} becomes the divergence of $\sum_n(S^\uparrow_n)^{1-a}$, which \cite{Cur} obtains from the scaling limit of $S^\uparrow$ and Jeulin's lemma.
+Taking $k=p$ in \eqref{eq:compar} gives
+\[
+\tfrac14R(p)\le p\,\nu(-p)\le R(p),
+\]
+so Proposition~\ref{prop:sum} states that $\sum_nP_n\nu(-P_n)=\infty$ almost surely for every admissible critical $\mathbf q$; this is the divergence that Curien's argument obtains for $\sum_n(S^\uparrow_n)^{1-a}$, without a tail assumption. When $\nu(-k)\sim p_{\mathbf q}k^{-a}$ with $a\in(3/2,5/2]$, \eqref{eq:compar} gives $T(p)\asymp p^{3/2-a}$ and $R(p)\asymp p^{1-a}$, and Proposition~\ref{prop:sum} becomes the divergence of $\sum_n(S^\uparrow_n)^{1-a}$, which \cite{Cur} obtains from the scaling limit of $S^\uparrow$ and Jeulin's lemma.
 \end{remark}
 
 \section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
@@ -281,7 +285,7 @@ By Propositions~\ref{prop:escape} and~\ref{prop:sum} and Lemma~\ref{lem:est}, al
 \end{equation}
 For $n\ge0$ and $i\ge0$, on the event $\{i<2P_n\}$ let $\varepsilon_{n,i}$ be the exposed edge at position $i$ at time $n$, and let $\tau_{n,i}$ be the first time after $n$ at which $\varepsilon_{n,i}$ is not exposed ($\tau_{n,i}=\infty$ if there is none). Put $\tau_{n,i}=n+1$ on $\{i\ge2P_n\}$. Then $\tau_{n,i}$ is a stopping time for $(\F_m)$, and since an edge that stops being exposed is never exposed again, Lemma~\ref{lem:swallow} gives $\Pp(\tau_{n,i}=m+1\mid\F_m)\ge b(P_m)\1\{P_m\ge4\}$ on $\{\tau_{n,i}>m\ge n\}$. By Lemma~\ref{lem:hazard} and \eqref{eq:bsum}, $\Pp(\tau_{n,i}=\infty)=0$. Every edge that is ever exposed is one of the countably many $\varepsilon_{n,i}$, so almost surely every edge that is ever exposed stops being exposed at a finite time.
 
-On this event, let $f$ be a face of $\mathfrak m$ and let $f_0,f_1,\dots,f_r=f$ be a path in the dual map with $f_0$ the boundary face, consecutive faces sharing an edge. If some $f_j$ is not in $\bigcup_n\bar{\mathfrak e}_n$, take the smallest such $j$; then $j\ge1$ and $f_{j-1}\in\bar{\mathfrak e}_s$ for some $s$. The edge shared by $f_{j-1}$ and $f_j$ is an edge of $\bar{\mathfrak e}_s$ whose other side is not in $\bar{\mathfrak e}_s$, so it is exposed at time $s$. It stops being exposed at some finite time $m$, and then it has faces of $\bar{\mathfrak e}_m$ on both sides, so $f_j\in\bar{\mathfrak e}_m$, a contradiction. Thus every face of $\mathfrak m$ belongs to $\bigcup_n\bar{\mathfrak e}_n$, and so does every edge and vertex, each being incident to a face.
+On this event, let $f$ be a face of $\mathfrak m$ and let $f_0,f_1,\dots,f_r=f$ be a path in the dual map with $f_0$ the boundary face, consecutive faces sharing an edge. If some $f_j$ is not in $\bigcup_n\bar{\mathfrak e}_n$, take the smallest such $j$; then $j\ge1$ and $f_{j-1}\in\bar{\mathfrak e}_s$ for some $s$. The edge shared by $f_{j-1}$ and $f_j$ is an edge of $\bar{\mathfrak e}_s$ whose other side is not in $\bar{\mathfrak e}_s$, so it has an exposed occurrence at time $s$. That occurrence stops being exposed at some finite time $m$, and then the edge is an inner edge of $\bar{\mathfrak e}_m$, so $f_j\in\bar{\mathfrak e}_m$, a contradiction. Thus every face of $\mathfrak m$ belongs to $\bigcup_n\bar{\mathfrak e}_n$, and so does every edge and vertex, each being incident to a face.
 \end{proof}
 
 \section{Computations}\label{sec:numerics}
@@ -290,12 +294,12 @@ The repository \cite{code} contains three Python programs. The first, \texttt{ke
 \[
 q_1=0,\qquad q_k=\frac{C_*\,k^{-4}Z_*^{1-k}}{\binom{2k-1}{k-1}}\quad(k\ge2),\qquad C_*=\frac1{\zeta(3)-1},\qquad Z_*=\frac{\zeta(3)-1}{\zeta(3)-\zeta(4)},
 \]
-for which $f(Z_*r)=C_*\sum_{k\ge2}k^{-4}r^{k-1}$, so that $f(Z_*)=C_*(\zeta(4)-1)=1-1/Z_*$ and $Z_*^2f'(Z_*)=Z_*C_*(\zeta(3)-\zeta(4))=1$; here $f$ has radius of convergence exactly $Z_*$. In this case $J'(r)=Z_*C_*(\zeta(3)-\mathrm{Li}_3(r)/r)$, and $\int_0^1r^jJ'(r)\,dr=Z_*C_*\bigl(\zeta(2)/j^2-\zeta(3)/(j(j+1))-H_j/j^3\bigr)$ for $j\ge1$, with $H_j$ the harmonic number. The program checks the two critical equations, compares $\nu(-k)$ from this closed form with $d(k)T(k)/(2k-1)$, checks that $\nu$ has total mass one, and checks \eqref{eq:harm} for $p\le6$. The relative differences are below $2\cdot10^{-40}$ in $40$-digit arithmetic for $k\le50$ and at the level of double-precision rounding for $k=200$ and $k=1000$. The harmonicity residuals for $p\le6$ are at most $1.2\cdot10^{-41}$ in absolute value; the total mass is summed in double precision and differs from one by $2.2\cdot10^{-16}$.
+for which $f(Z_*r)=C_*\sum_{k\ge2}k^{-4}r^{k-1}$, so that $f(Z_*)=C_*(\zeta(4)-1)=1-1/Z_*$ and $Z_*^2f'(Z_*)=Z_*C_*(\zeta(3)-\zeta(4))=1$; here $f$ has radius of convergence exactly $Z_*$. In this case $J'(r)=Z_*C_*(\zeta(3)-\mathrm{Li}_3(r)/r)$, and $\int_0^1r^jJ'(r)\,dr=Z_*C_*\bigl(\zeta(2)/j^2-\zeta(3)/(j(j+1))-H_j/j^3\bigr)$ for $j\ge1$, with $H_j$ the harmonic number. The program checks the two critical equations, compares $\nu(-k)$ from this closed form with $d(k)T(k)/(2k-1)$, checks that $\nu$ has total mass one, and checks \eqref{eq:harm} for $p\le6$. The relative differences are below $2\cdot10^{-40}$ in $40$-digit arithmetic for $k=1,2,3,5,10,50$ and at the level of double-precision rounding for $k=200$ and $k=1000$. The harmonicity residuals for $p\le6$ are at most $1.2\cdot10^{-41}$ in absolute value; the total mass is summed in double precision and differs from one by $2.2\cdot10^{-16}$.
 
 \sloppy
 The second program, \texttt{universal\_checks.py}, takes positive laws $\nu(m)$, $m\ge1$, with $\sum_m\nu(m)h(m+1)=1$, concentrated on single atoms $m\in\{1,4,64,4096,10^6\}$ or spread over these five atoms, defines $\nu(-k)$ by Proposition~\ref{prop:kernel}, and computes the rows of \eqref{eq:K} at $p=1,2,4,8,16$ and $p=4^j$, $3\le j\le7$. All $70$ rows sum to one within $6\cdot10^{-16}$, so the kernel formula reproduces \eqref{eq:harm} for these laws. Over these rows the ratios to $R(p)$ of $K(p,B_p)$, $|\E_p L|$, $\E_pL^2$ and $\delta(p)$ are at most $2.66$, $0.51$, $0.30$ and $1.00$, and $b(p)/R(p)\ge0.044$ for $p\ge8$.
 
-A third program, \texttt{experiment.py}, verifies the closed form of $\int_0^1r^jJ'(r)\,dr$ against numerical quadrature for $j\le10$ (to $2\cdot10^{-56}$), shows that $j^2\int_0^1r^jJ'(r)\,dr$ approaches $2D$ with $D=1+Z_*^3f''(Z_*)/2$ (the ratio is $0.998$ at $j=10^4$), and sums truncated rows of \eqref{eq:K} for this sequence. The repository also contains a Lean file with six elementary identities and inequalities checked in Mathlib: three about the second-order expansion of $y(1-f(y))$ at $y=Z$ under the critical equations, and three used in Section~\ref{sec:kernel}, namely $k(m+p)\le p(m+k)$ for $m\ge0$ and $k\le p$ (behind \eqref{eq:Tmono}), $m+p\le3m$ for $p\le2m$ (behind Lemma~\ref{lem:est}(d)), and the passage from $2k\,d(k)=(2k-1)d(k-1)$ to the final step of the proof of Proposition~\ref{prop:kernel}.
+A third program, \texttt{experiment.py}, verifies the closed form of $\int_0^1r^jJ'(r)\,dr$ against numerical quadrature for $j=1,3,10$ (to $2\cdot10^{-56}$), shows that $j^2\int_0^1r^jJ'(r)\,dr$ approaches $2D$ with $D=1+Z_*^3f''(Z_*)/2$ (the ratio is $0.998$ at $j=10^4$), and sums truncated rows of \eqref{eq:K} for this sequence. The repository also contains a Lean file with six elementary identities and inequalities checked in Mathlib: three about the second-order expansion of $y(1-f(y))$ at $y=Z$ under the critical equations, and three used in Section~\ref{sec:kernel}, namely $k(m+p)\le p(m+k)$ for $m\ge0$ and $k\le p$ (behind \eqref{eq:Tmono}), $m+p\le3m$ for $p\le2m$ (behind Lemma~\ref{lem:est}(d)), and the passage from $2k\,d(k)=(2k-1)d(k-1)$ to the final step of the proof of Proposition~\ref{prop:kernel}.
 
 \section*{Acknowledgements and funding}
 The research presented in this paper was supported by the European Research
@@ -360,7 +364,7 @@ $C$ & absolute constant, which may change from line to line & Lemma~\ref{lem:est
 T.~Budd, The peeling process of infinite Boltzmann planar maps, \emph{Electron. J. Combin.} \textbf{23}(1) (2016), Paper~1.28. Also arXiv:1506.01590.
 
 \bibitem{BC}
-T.~Budd and N.~Curien, Geometry of infinite planar maps with high degrees, \emph{Electron. J. Probab.} \textbf{22} (2017), 1--37.
+T.~Budd and N.~Curien, Geometry of infinite planar maps with high degrees, \emph{Electron. J. Probab.} \textbf{22} (2017), Paper No.~35, 1--37.
 
 \bibitem{BCM}
 T.~Budd, N.~Curien and C.~Marzouk, Infinite random planar maps related to Cauchy processes, \emph{J. \'Ec. polytech. Math.} \textbf{5} (2018), 749--791.
@@ -378,7 +382,7 @@ N.~Curien, \emph{Peeling Random Planar Maps}, \'Ecole d'\'Et\'e de Probabilit\'e
 \bibitem{CMr} N.~Curien and C.~Marzouk, Markovian explorations of random planar maps are roundish, \emph{Bull. Soc. Math. France} \textbf{148} (2020), no.~4, 709--732, doi:10.24033/bsmf.2821.
 
 \bibitem{Jeu}
-T.~Jeulin, \emph{Semi-martingales et grossissement d'une filtration}, Lecture Notes in Mathematics 833, Springer, Berlin, 1980.
+T.~Jeulin, Sur la convergence absolue de certaines int\'egrales, in \emph{S\'eminaire de Probabilit\'es XVI}, Lecture Notes in Mathematics 920, Springer, Berlin, 1982, 248--256.
 
 \bibitem{LGM}
 J.-F.~Le Gall and G.~Miermont, Scaling limits of random planar maps with large faces, \emph{Ann. Probab.} \textbf{39} (2011), 1--69.
