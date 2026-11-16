@@ -322,6 +322,8 @@ in the funding declaration above.
 \section*{Declaration of generative AI and AI-assisted technologies}
 The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In October 2026 OpenAI GPT models, running as research tasks of that project, proposed Theorem~\ref{thm:main} and its proof through the kernel formula, the estimates of Lemma~\ref{lem:est}, the localisation argument of Proposition~\ref{prop:sum} and the survival bound of Lemma~\ref{lem:hazard}, and wrote the Lean file and the program \texttt{universal\_checks.py}. In November 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, checked the proof, wrote \texttt{kernel\_check.py}, and wrote the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
 
+The results rest on the work of others. The question is the open question in Curien's Saint-Flour notes~\cite{Cur}, whose theory of peeling explorations of Boltzmann maps, filled-in explorations and Corollary~27 for weight sequences of type $a\in[3/2,5/2]$ is the starting point here. The peeling process was introduced by Angel~\cite{Ang}, and the exhaustion of the uniform infinite planar triangulation and quadrangulation is due to Curien and Le Gall~\cite{CLG}. These results are theirs. The new steps are the exact formula for the negative jumps of Proposition~\ref{prop:kernel}, the estimates of Lemma~\ref{lem:est}, the localisation argument of Proposition~\ref{prop:sum} and the survival bound of Lemma~\ref{lem:hazard}, which together give Theorem~\ref{thm:main} for every admissible critical weight sequence.
+
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/critical-peeling-exhaustion}.
 
@@ -388,7 +390,7 @@ T.~Jeulin, Sur la convergence absolue de certaines int\'egrales, in \emph{S\'emi
 J.-F.~Le Gall and G.~Miermont, Scaling limits of random planar maps with large faces, \emph{Ann. Probab.} \textbf{39} (2011), 1--69.
 
 \bibitem{code}
-Y.~Shmalo, Computations for ``Filled-in peeling explorations exhaust every critical Boltzmann planar map'', \url{https://github.com/yspennstate/critical-peeling-exhaustion}, 2026.
+Y.~Shmalo, Computations for ``Filled-in peeling explorations exhaust every critical Boltzmann planar map'', source code repository, \url{https://github.com/yspennstate/critical-peeling-exhaustion}, 2026.
 
 \bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
 
